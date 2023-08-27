@@ -1,0 +1,9 @@
+<div *ngIf="isLoggedIn && post">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.body }}</p>
+  <button mat-raised-button color="primary" (click)="goToPostList()">
+    Back to Posts
+  </button>
+</div>
+<div *ngIf="!isLoggedIn">Please log in to view post details.</div>
+<div *ngIf="isLoggedIn && !post">Loading...</div>
